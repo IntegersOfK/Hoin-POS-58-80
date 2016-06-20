@@ -1,0 +1,139 @@
+*PPD-Adobe:             "4.3"
+*FormatVersion:         "4.3"
+*FileVersion:           "1.1"
+*LanguageVersion:       English
+*LanguageEncoding:      ISOLatin1
+*PCFileName:            "POS80.ppd"
+*Manufacturer:          "POS"
+*Product:               "(POS-80)"
+*1284DeviceID:          "MFG:POS;CMD:POS;MDL:POS-80-Series;CLS:PRINTER;"
+*cupsVersion:           1.1
+*cupsManualCopies:      True
+*cupsModelNumber:       80
+*cupsFilter:            "application/vnd.cups-raster 0 rastertopos"
+*ModelName:             "POS-80-Series"
+*ShortNickName:         "POS-80"
+*NickName:              "POS-80"
+*PSVersion:             "(3010.000) 550"
+*LanguageLevel:         "3"
+*ColorDevice:           False
+*DefaultColorSpace:     Gray
+*FileSystem:            False
+*Throughput:            "1"
+*LandscapeOrientation:  Plus90
+*VariablePaperSize:     True
+*TTRasterizer:          Type42
+
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: X80mmY210mm
+*%PageSize Custom/Custom:                       "<</PageSize[0 0]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80mmY210mm/80mm x 210mm:         "<</PageSize[227 595]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80mmY297mm/80mm x 297mm:         "<</PageSize[227 842]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X80mmY3276mm/80mm x 3276mm:       "<</PageSize[227 9286]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: X80mmY210mm
+*%PageRegion Custom/Custom:                         "<</PageSize[0 0]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80mmY210mm/80mm x 210mm:         "<</PageSize[227 595]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80mmY297mm/80mm x 297mm:         "<</PageSize[227 842]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X80mmY3276mm/80mm x 3276mm:       "<</PageSize[227 9286]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: X80mmY210mm
+*%ImageableArea Custom:             "0 0 0 0"
+*ImageableArea X80mmY210mm:              "11 0 215 595"
+*ImageableArea X80mmY297mm:              "11 0 215 842"
+*ImageableArea X80mmY3276mm:             "11 0 215 9286"
+
+*DefaultPaperDimension: X80mmY210mm
+*%PaperDimension Custom:             "0 0"
+*PaperDimension X80mmY210mm:             "227 595"
+*PaperDimension X80mmY297mm:             "227 842"
+*PaperDimension X80mmY3276mm:            "227 9286"
+
+*%MaxMediaWidth:  "226"
+*%MaxMediaHeight: "5670"
+*%HWMargins:      0 0 0 0
+*%CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*%ParamCustomPageSize Width:        1 points 72 226
+*%ParamCustomPageSize Height:       2 points 72 5670
+*%ParamCustomPageSize WidthOffset:  3 points 0 0
+*%ParamCustomPageSize HeightOffset: 4 points 0 0
+*%ParamCustomPageSize Orientation:  5 int 0 0
+
+*OpenGroup: POSDeviceSettings/Device Settings
+
+*OpenUI *CashDrawer/Cash Drawer:PickOne
+*DefaultCashDrawer: 1CashDrawer1BeforePrinting
+*CashDrawer 0NoCashDrawer/No Cash Drawer: ""
+*CashDrawer 1CashDrawer1BeforePrinting/Cash Drawer #1 Before Printing: ""
+*CashDrawer 2CashDrawer2BeforePrinting/Cash Drawer #2 Before Printing: ""
+*CashDrawer 3CashDrawer12BeforePrinting/Cash Drawer #1+#2 Before Printing: ""
+*CashDrawer 4CashDrawer1AfterPrinting/Cash Drawer #1 After Printing: ""
+*CashDrawer 5CashDrawer2AfterPrinting/Cash Drawer #2 After Printing: ""
+*CashDrawer 6CashDrawer12AfterPrinting/Cash Drawer #1+#2 After Printing: ""
+*CloseUI: *CashDrawer
+
+*OpenUI *BlankSpace/Blank space at page's end:PickOne
+*DefaultBlankSpace: 1NoPrint
+*BlankSpace 0Print/Print: ""
+*BlankSpace 1NoPrint/Do not print: ""
+*CloseUI: *BlankSpace
+
+*OpenUI *FeedDist/Feed distance after print:PickOne
+*DefaultFeedDist: 9feed30mm
+*FeedDist 0feed3mm/feed 3mm: ""
+*FeedDist 1feed6mm/feed 6mm: ""
+*FeedDist 2feed9mm/feed 9mm: ""
+*FeedDist 3feed12mm/feed 12mm: ""
+*FeedDist 4feed15mm/feed 15mm: ""
+*FeedDist 5feed18mm/feed 18mm: ""
+*FeedDist 6feed21mm/feed 21mm: ""
+*FeedDist 7feed24mm/feed 24mm: ""
+*FeedDist 8feed27mm/feed 27mm: ""
+*FeedDist 9feed30mm/feed 30mm: ""
+*FeedDist 10feed33mm/feed 33mm: ""
+*FeedDist 11feed36mm/feed 36mm: ""
+*FeedDist 12feed39mm/feed 39mm: ""
+*FeedDist 13feed42mm/feed 42mm: ""
+*FeedDist 14feed45mm/feed 45mm: ""
+*CloseUI: *FeedDist
+
+*OpenUI *Cutting/Cutting:PickOne
+*DefaultCutting: 1Cutattheendofpage
+*Cutting 0NoCutting/No Cutting: ""
+*Cutting 1Cutattheendofpage/Cut at the end of page: ""
+*Cutting 2Cutattheendofdocument/Cut at the end of document: ""
+*CloseUI: *Cutting
+
+*OpenUI *Beeper/Beeper:PickOne
+*DefaultBeeper: 2Beepbeforeeverypage
+*Beeper 0NoBeeping/No Beeping: ""
+*Beeper 1Beepaftereverypage/Beep after every page: ""
+*Beeper 2Beepbeforeeverypage/Beep before every page: ""
+*Beeper 3Beepafterdocument/Beep after document: ""
+*Beeper 4Beepbeforedocument/Beep before document: ""
+*CloseUI: *Beeper
+
+*OpenUI *NVLogo/NV Logo:PickOne
+*DefaultNVLogo: 0DonotprintNVLogo
+*NVLogo 0DonotprintNVLogo/Do not print NV Logo: ""
+*NVLogo 1PrintNVLogo/Print NV Logo1: ""
+*NVLogo 2PrintNVLogo/Print NV Logo2: ""
+*NVLogo 3PrintNVLogo/Print NV Logo3: "" 
+*NVLogo 4PrintNVLogo/Print NV Logo4: ""
+*NVLogo 5PrintNVLogo/Print NV Logo5: ""
+*NVLogo 6PrintNVLogo/Print NV Logo6: ""
+*NVLogo 7PrintNVLogo/Print NV Logo7: ""
+*NVLogo 8PrintNVLogo/Print NV Logo8: ""
+*CloseUI: *NVLogo
+
+*CloseGroup: POSDeviceSettings
+
+
+
+
+*% End

@@ -1,0 +1,110 @@
+*PPD-Adobe:             "4.3"
+*FormatVersion:         "4.3"
+*FileVersion:           "1.1"
+*LanguageVersion:       English
+*LanguageEncoding:      ISOLatin1
+*PCFileName:            "pos58.ppd"
+*Manufacturer:          "POS"
+*Product:               "(POS-58)"
+*1284DeviceID:          "MFG:POS;CMD:POS;MDL:POS-58-Series;CLS:PRINTER;"
+*cupsVersion:           1.1
+*cupsManualCopies:      True
+*cupsModelNumber:       58
+*cupsFilter:            "application/vnd.cups-raster 0 rastertopos58"
+*ModelName:             "POS-58-Series"
+*ShortNickName:         "POS-58"
+*NickName:              "POS-58"
+*PSVersion:             "(3010.000) 550"
+*LanguageLevel:         "3"
+*ColorDevice:           False
+*DefaultColorSpace:     Gray
+*FileSystem:            False
+*Throughput:            "1"
+*LandscapeOrientation:  Plus90
+*VariablePaperSize:     True
+*TTRasterizer:          Type42
+
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: X58mmY210mm
+*%PageSize Custom/Custom:                       "<</PageSize[0 0]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X58mmY210mm/58mm x 210mm:         "<</PageSize[164 595]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X58mmY297mm/58mm x 297mm:         "<</PageSize[164 842]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageSize X58mmY3276mm/58mm x 3276mm:       "<</PageSize[164 9286]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: X58mmY210mm
+*%PageRegion Custom/Custom:                         "<</PageSize[0 0]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X58mmY210mm/58mm x 210mm:         "<</PageSize[164 595]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X58mmY297mm/58mm x 297mm:         "<</PageSize[164 842]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*PageRegion X58mmY3276mm/58mm x 3276mm:       "<</PageSize[164 9286]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: X58mmY210mm
+*%ImageableArea Custom:             "0 0 0 0"
+*ImageableArea X58mmY210mm:              "14 0 150 595"
+*ImageableArea X58mmY297mm:              "14 0 150 842"
+*ImageableArea X58mmY3276mm:             "14 0 150 9286"
+
+*DefaultPaperDimension: X58mmY210mm
+*%PaperDimension Custom:             "0 0"
+*PaperDimension X58mmY210mm:             "164 595"
+*PaperDimension X58mmY297mm:             "164 842"
+*PaperDimension X58mmY3276mm:            "164 9286"
+
+*%MaxMediaWidth:  "226"
+*%MaxMediaHeight: "5670"
+*%HWMargins:      0 0 0 0
+*%CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*%ParamCustomPageSize Width:        1 points 72 226
+*%ParamCustomPageSize Height:       2 points 72 5670
+*%ParamCustomPageSize WidthOffset:  3 points 0 0
+*%ParamCustomPageSize HeightOffset: 4 points 0 0
+*%ParamCustomPageSize Orientation:  5 int 0 0
+
+*OpenGroup: POSDeviceSettings/Device Settings
+
+*OpenUI *CashDrawer/Cash Drawer:PickOne
+*DefaultCashDrawer: 1CashDrawer1BeforePrinting
+*CashDrawer 0NoCashDrawer/No Cash Drawer: ""
+*CashDrawer 1CashDrawer1BeforePrinting/Cash Drawer #1 Before Printing: ""
+*CashDrawer 2CashDrawer2BeforePrinting/Cash Drawer #2 Before Printing: ""
+*CashDrawer 3CashDrawer12BeforePrinting/Cash Drawer #1+#2 Before Printing: ""
+*CashDrawer 4CashDrawer1AfterPrinting/Cash Drawer #1 After Printing: ""
+*CashDrawer 5CashDrawer2AfterPrinting/Cash Drawer #2 After Printing: ""
+*CashDrawer 6CashDrawer12AfterPrinting/Cash Drawer #1+#2 After Printing: ""
+*CloseUI: *CashDrawer
+
+*OpenUI *BlankSpace/Blank space at page's end:PickOne
+*DefaultBlankSpace: 1NoPrint
+*BlankSpace 0Print/Print: ""
+*BlankSpace 1NoPrint/Do not print: ""
+*CloseUI: *BlankSpace
+
+*OpenUI *FeedDist/Feed distance after print:PickOne
+*DefaultFeedDist: 9feed30mm
+*FeedDist 0feed3mm/feed 3mm: ""
+*FeedDist 1feed6mm/feed 6mm: ""
+*FeedDist 2feed9mm/feed 9mm: ""
+*FeedDist 3feed12mm/feed 12mm: ""
+*FeedDist 4feed15mm/feed 15mm: ""
+*FeedDist 5feed18mm/feed 18mm: ""
+*FeedDist 6feed21mm/feed 21mm: ""
+*FeedDist 7feed24mm/feed 24mm: ""
+*FeedDist 8feed27mm/feed 27mm: ""
+*FeedDist 9feed30mm/feed 30mm: ""
+*FeedDist 10feed33mm/feed 33mm: ""
+*FeedDist 11feed36mm/feed 36mm: ""
+*FeedDist 12feed39mm/feed 39mm: ""
+*FeedDist 13feed42mm/feed 42mm: ""
+*FeedDist 14feed45mm/feed 45mm: ""
+*CloseUI: *FeedDist
+
+*CloseGroup: POSDeviceSettings
+
+
+
+
+*% End
