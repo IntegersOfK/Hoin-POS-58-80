@@ -40,6 +40,8 @@
 #define EJECT_CASH_DRAWER2_AFTER_PRINT	5
 #define EJECT_CASH_DRAWER12_AFTER_PRINT	6
 
+#define CUT_AT_PAGE_END	1
+#define CUT_AT_DOC_END	2
 #define BEEP_AFTER_PAGE	1
 #define BEEP_BEFORE_PAGE	2
 #define BEEP_AFTER_DOC	3
@@ -64,6 +66,7 @@ int		Page;			/* Current page number */
 int     cashDrawerSetting;
 int     blankSpaceSetting;
 int     feedDistSetting;
+int     cuttingSetting;
 int     beeperSetting;
 int     logoSetting;
 
@@ -78,6 +81,7 @@ void	CancelJob(int sig);
 
 static int getPaperWidth();
 static void ejectCashDrawer(int no);
+static void cutPaper();
 static void beep();
 static void printLogo(int logoNo);
 
@@ -113,6 +117,9 @@ Setup(void)
 void
 Shutdown(void)
 {
+	if(cuttingSetting == CUT_AT_DOC_END){
+		cutPaper();
+	}
 
 	if(beeperSetting == BEEP_AFTER_DOC){
 		beep();
@@ -254,6 +261,9 @@ EndPage(void)
   }
   //handle feedDist option end.
 
+  if(cuttingSetting == CUT_AT_PAGE_END){
+	  cutPaper();
+  }
   if(beeperSetting == BEEP_AFTER_PAGE){
 	  beep();
   }
@@ -380,6 +390,10 @@ main(int  argc,		/* I - Number of command-line arguments */
 	if( choice != NULL ){
        feedDistSetting = atoi(choice->choice);
     }
+	choice = ppdFindMarkedChoice(ppd, "Cutting");
+	if( choice != NULL ){
+	    cuttingSetting = atoi(choice->choice);
+	}
 	choice = ppdFindMarkedChoice(ppd, "Beeper");
 	if( choice != NULL ){
        beeperSetting = atoi(choice->choice);
@@ -595,6 +609,16 @@ static void ejectCashDrawer(int no)
 		buf[9] = 0x50;
 		fwrite(buf, 10, 1, stdout);
 	}
+}
+
+static void cutPaper()
+{
+	unsigned char buf[3];
+
+	buf[0] = 0x1d;
+	buf[1] = 'V';
+	buf[2] = 0x01;
+	fwrite(buf, 3, 1, stdout);
 }
 
 static void beep()
