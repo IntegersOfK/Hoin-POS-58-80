@@ -102,6 +102,34 @@
 *FeedDist 14feed45mm/feed 45mm: ""
 *CloseUI: *FeedDist
 
+*OpenUI *Cutting/Cutting:PickOne
+*DefaultCutting: 1Cutattheendofpage
+*Cutting 0NoCutting/No Cutting: ""
+*Cutting 1Cutattheendofpage/Cut at the end of page: ""
+*Cutting 2Cutattheendofdocument/Cut at the end of document: ""
+*CloseUI: *Cutting
+
+*OpenUI *Beeper/Beeper:PickOne
+*DefaultBeeper: 2Beepbeforeeverypage
+*Beeper 0NoBeeping/No Beeping: ""
+*Beeper 1Beepaftereverypage/Beep after every page: ""
+*Beeper 2Beepbeforeeverypage/Beep before every page: ""
+*Beeper 3Beepafterdocument/Beep after document: ""
+*Beeper 4Beepbeforedocument/Beep before document: ""
+*CloseUI: *Beeper
+
+*OpenUI *NVLogo/NV Logo:PickOne
+*DefaultNVLogo: 0DonotprintNVLogo
+*NVLogo 0DonotprintNVLogo/Do not print NV Logo: ""
+*NVLogo 1PrintNVLogo/Print NV Logo1: ""
+*NVLogo 2PrintNVLogo/Print NV Logo2: ""
+*NVLogo 3PrintNVLogo/Print NV Logo3: "" 
+*NVLogo 4PrintNVLogo/Print NV Logo4: ""
+*NVLogo 5PrintNVLogo/Print NV Logo5: ""
+*NVLogo 6PrintNVLogo/Print NV Logo6: ""
+*NVLogo 7PrintNVLogo/Print NV Logo7: ""
+*NVLogo 8PrintNVLogo/Print NV Logo8: ""
+*CloseUI: *NVLogo
 *CloseGroup: POSDeviceSettings
 
 
