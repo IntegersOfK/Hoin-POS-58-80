@@ -27,42 +27,50 @@
 *OpenUI *PageSize/Media Size: PickOne
 *OrderDependency: 10 AnySetup *PageSize
 *DefaultPageSize: X80mmY210mm
-*%PageSize Custom/Custom:                       "<</PageSize[0 0]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
-*PageSize X80mmY210mm/80mm x 210mm:         "<</PageSize[227 595]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
-*PageSize X80mmY297mm/80mm x 297mm:         "<</PageSize[227 842]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
-*PageSize X80mmY3276mm/80mm x 3276mm:       "<</PageSize[227 9286]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*%PageSize Custom/Custom: "<</PageSize[0 0]/ImagingBBox null>>setpagedevice"
+*PageSize X80mmY210mm/80mm x 210mm: "<</PageSize[227 595]/ImagingBBox null>>setpagedevice"
+*PageSize X80mmY297mm/80mm x 297mm: "<</PageSize[227 842]/ImagingBBox null>>setpagedevice"
+*PageSize X80mmY3276mm/80mm x 3276mm: "<</PageSize[227 9286]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageSize
 
 *OpenUI *PageRegion: PickOne
 *OrderDependency: 10 AnySetup *PageRegion
 *DefaultPageRegion: X80mmY210mm
-*%PageRegion Custom/Custom:                         "<</PageSize[0 0]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
-*PageRegion X80mmY210mm/80mm x 210mm:         "<</PageSize[227 595]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
-*PageRegion X80mmY297mm/80mm x 297mm:         "<</PageSize[227 842]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
-*PageRegion X80mmY3276mm/80mm x 3276mm:       "<</PageSize[227 9286]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*%PageRegion Custom/Custom: "<</PageSize[0 0]/ImagingBBox null>>setpagedevice"
+*PageRegion X80mmY210mm/80mm x 210mm: "<</PageSize[227 595]/ImagingBBox null>>setpagedevice"
+*PageRegion X80mmY297mm/80mm x 297mm: "<</PageSize[227 842]/ImagingBBox null>>setpagedevice"
+*PageRegion X80mmY3276mm/80mm x 3276mm: "<</PageSize[227 9286]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageRegion
 
 *DefaultImageableArea: X80mmY210mm
-*%ImageableArea Custom:             "0 0 0 0"
-*ImageableArea X80mmY210mm:              "11 0 215 595"
-*ImageableArea X80mmY297mm:              "11 0 215 842"
-*ImageableArea X80mmY3276mm:             "11 0 215 9286"
+*%ImageableArea Custom: "0 0 0 0"
+*ImageableArea X80mmY210mm: "0 0 227 595"
+*ImageableArea X80mmY297mm: "0 0 227 842"
+*ImageableArea X80mmY3276mm: "0 0 227 9286"
 
 *DefaultPaperDimension: X80mmY210mm
-*%PaperDimension Custom:             "0 0"
-*PaperDimension X80mmY210mm:             "227 595"
-*PaperDimension X80mmY297mm:             "227 842"
-*PaperDimension X80mmY3276mm:            "227 9286"
+*%PaperDimension Custom: "0 0"
+*PaperDimension X80mmY210mm: "227 595"
+*PaperDimension X80mmY297mm: "227 842"
+*PaperDimension X80mmY3276mm: "227 9286"
 
-*%MaxMediaWidth:  "226"
+*%MaxMediaWidth:  "227"
 *%MaxMediaHeight: "5670"
 *%HWMargins:      0 0 0 0
-*%CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/HWResolution[203 203]/ImagingBBox null>>setpagedevice"
+*%CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
 *%ParamCustomPageSize Width:        1 points 72 226
 *%ParamCustomPageSize Height:       2 points 72 5670
 *%ParamCustomPageSize WidthOffset:  3 points 0 0
 *%ParamCustomPageSize HeightOffset: 4 points 0 0
 *%ParamCustomPageSize Orientation:  5 int 0 0
+
+*% Resolution settings.
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 20 AnySetup *Resolution
+*DefaultResolution: 180x180dpi
+*Resolution 180x180dpi/180 x 180 dpi: "<</HWResolution[180 180]/cupsRowCount 24/cupsBitsPerColor 1>>setpagedevice"
+*Resolution 203x203dpi/203 x 203 dpi: "<</HWResolution[203 203]/cupsRowCount 24/cupsBitsPerColor 1>>setpagedevice"
+*CloseUI: *Resolution
 
 *OpenGroup: POSDeviceSettings/Device Settings
 
@@ -84,7 +92,7 @@
 *CloseUI: *BlankSpace
 
 *OpenUI *FeedDist/Feed distance after print:PickOne
-*DefaultFeedDist: 9feed30mm
+*DefaultFeedDist: 5feed18mm
 *FeedDist 0feed3mm/feed 3mm: ""
 *FeedDist 1feed6mm/feed 6mm: ""
 *FeedDist 2feed9mm/feed 9mm: ""
@@ -110,7 +118,7 @@
 *CloseUI: *Cutting
 
 *OpenUI *Beeper/Beeper:PickOne
-*DefaultBeeper: 2Beepbeforeeverypage
+*DefaultBeeper: 0NoBeeping
 *Beeper 0NoBeeping/No Beeping: ""
 *Beeper 1Beepaftereverypage/Beep after every page: ""
 *Beeper 2Beepbeforeeverypage/Beep before every page: ""
